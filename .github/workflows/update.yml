@@ -1,0 +1,57 @@
+# Daily update of the rates, run by GitHub on its own servers.
+# Twice a day, Paris time, so rates published late are caught by the next run.
+# It can also be started by hand: Actions tab > "Mise à jour des taux" > "Run workflow".
+
+name: Mise à jour des taux
+
+on:
+  schedule:
+    # Not on the hour: GitHub delays runs at the start of each hour when busy.
+    - cron: "17 21 * * *"   # every evening at 21:17
+      timezone: "Europe/Paris"
+    - cron: "47 6 * * *"    # every morning at 06:47
+      timezone: "Europe/Paris"
+  workflow_dispatch:
+
+permissions:
+  contents: write   # needed to save the updated data files
+
+concurrency:
+  group: update-rates   # never two updates at the same time
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Check the code (offline tests)
+        run: python -m unittest tests.test_parsers tests.test_export
+
+      - name: Fetch new rates
+        id: update
+        continue-on-error: true   # save what worked even if one source failed
+        run: python update.py
+
+      - name: Save the data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No change."
+          else
+            git commit -m "Mise à jour des taux $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi
+
+      - name: Report a failed source
+        if: steps.update.outcome == 'failure'
+        run: |
+          echo "::error::At least one source failed. Open the 'Fetch new rates' step to see which one."
+          exit 1
