@@ -27,7 +27,9 @@ jobs:
           check "Banque de France" "https://webstat.banque-france.fr/export/csv-columns/fr/selection/5385698"
           check "UAE" "https://centralbank.ae/umbraco/Surface/Exchange/GetExchangeRateAllCurrencyDate?dateTime=2026-09-01"
           check "BCRA" "https://api.bcra.gob.ar/estadisticascambiarias/v1.0/Cotizaciones/EUR?fechadesde=2026-09-01&fechahasta=2026-09-01"
-          check "Banco de la Republica" -X POST -H "Content-type: application/json" \
+          # This server omits an intermediate certificate: add the project's copy, as the Python code does.
+          cat /etc/ssl/certs/ca-certificates.crt fxrates/certificates/*.pem > "$RUNNER_TEMP/ca.pem"
+          check "Banco de la Republica" --cacert "$RUNNER_TEMP/ca.pem" -X POST -H "Content-type: application/json" \
             -d '{"series":[{"idSerie":30,"idPeriodicidades":[1]}],"fechaInicio":20260901,"fechaFin":20260901}' \
             "https://suameca.banrep.gov.co/buscador-de-series/rest/buscadorSeriesRestService/consultaDatosSeries"
 
