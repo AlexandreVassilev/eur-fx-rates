@@ -1,0 +1,9 @@
+{
+  "csv_delimiter": ";",
+  "csv_decimal_mark": ",",
+  "history_start": "2025-01-01",
+  "refetch_days": 7,
+  "move_threshold_percent": 3,
+  "aed_usd_peg_tolerance_percent": 1,
+  "stale_after_days": 4
+}

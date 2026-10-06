@@ -1,0 +1,35 @@
+# Connection test: can GitHub's servers reach the four central banks?
+# Started by hand (Actions tab > "Test de connexion" > "Run workflow").
+# Downloads September 2026 from every source and compares it with the
+# reference file. Changes nothing in the repository.
+
+name: Test de connexion
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Quick check of each source (HTTP status)
+        run: |
+          check() { echo "$1: $(curl -s -o /dev/null -w '%{http_code}' -A 'Mozilla/5.0 (compatible; eur-fx-rates)' "${@:2}")"; }
+          check "Banque de France" "https://webstat.banque-france.fr/export/csv-columns/fr/selection/5385698"
+          check "UAE" "https://centralbank.ae/umbraco/Surface/Exchange/GetExchangeRateAllCurrencyDate?dateTime=2026-09-01"
+          check "BCRA" "https://api.bcra.gob.ar/estadisticascambiarias/v1.0/Cotizaciones/EUR?fechadesde=2026-09-01&fechahasta=2026-09-01"
+          check "Banco de la Republica" -X POST -H "Content-type: application/json" \
+            -d '{"series":[{"idSerie":30,"idPeriodicidades":[1]}],"fechaInicio":20260901,"fechaFin":20260901}' \
+            "https://suameca.banrep.gov.co/buscador-de-series/rest/buscadorSeriesRestService/consultaDatosSeries"
+
+      - name: Full check (September 2026 against the reference file)
+        run: python -m unittest -v

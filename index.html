@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taux de change EUR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Tableau de taux de change vis-à-vis de l'euro</h1>
+  <p id="mise-a-jour" class="mise-a-jour" hidden></p>
+  <div id="bandeau" class="bandeau" role="alert" hidden></div>
+
+  <div class="corps">
+    <div class="bloc">
+      <div class="controles">
+        <span>Choix de date :</span>
+        <label class="champ-libelle">De
+          <span class="champ-date">
+            <button type="button" class="date-affichee vide" data-pour="debut" data-vide="Début" aria-label="Date de début">Début</button>
+            <input type="date" id="debut" tabindex="-1" aria-hidden="true">
+          </span>
+        </label>
+        <label class="champ-libelle">à
+          <span class="champ-date">
+            <button type="button" class="date-affichee vide" data-pour="fin" data-vide="Fin" aria-label="Date de fin">Fin</button>
+            <input type="date" id="fin" tabindex="-1" aria-hidden="true">
+          </span>
+        </label>
+        <button type="button" id="dernier-mois" class="dernier-mois">Dernier mois complet</button>
+        <button type="button" id="telecharger" class="telecharger" disabled>Télécharger en CSV</button>
+      </div>
+
+      <p id="message" class="message" hidden></p>
+      <div id="cadre-tableau" class="cadre-tableau" hidden>
+        <table id="tableau">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <details id="alertes" class="alertes" hidden>
+        <summary></summary>
+        <ul></ul>
+      </details>
+    </div>
+    <aside class="sources">
+      <h2>Source utilisée</h2>
+      <ul>
+        <li>
+          <a href="https://www.banque-france.fr/fr/publications-et-statistiques/statistiques" target="_blank" rel="noopener noreferrer">Banque de France (taux de référence de la BCE)</a>
+          <span class="devises">CHF, HKD, INR, SGD, USD</span>
+        </li>
+        <li>
+          <a href="https://centralbank.ae/en/forex-eibor/exchange-rates/" target="_blank" rel="noopener noreferrer">Banque centrale des Émirats arabes unis</a>
+          <span class="devises">AED</span>
+        </li>
+        <li>
+          <a href="https://www.bcra.gob.ar/evolucion-moneda/" target="_blank" rel="noopener noreferrer">Banque centrale d'Argentine (BCRA)</a>
+          <span class="devises">ARS</span>
+        </li>
+        <li>
+          <a href="https://suameca.banrep.gov.co/descarga-multiple-de-datos/" target="_blank" rel="noopener noreferrer">Banque de la République (Colombie)</a>
+          <span class="devises">COP</span>
+          <span class="note">Série fournie par Refinitiv, selon la Banque de la République.</span>
+        </li>
+      </ul>
+    </aside>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

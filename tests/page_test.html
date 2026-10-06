@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head><meta charset="utf-8"><title>Tests de la page</title></head>
+<body style="font-family: sans-serif">
+<!-- Open through the local server: http://localhost:8000/tests/page_test.html
+     Runs tests/page_tests.js in this browser and compares the September 2026
+     download with tests/september_2026_reference.csv, byte for byte. -->
+<h1>Tests de la page</h1>
+<pre id="results">Tests en cours…</pre>
+<script src="../app.js"></script>
+<script src="page_tests.js"></script>
+<script>
+"use strict";
+async function load(path) {
+  const response = await fetch(path, { cache: "no-cache" });
+  if (!response.ok) throw new Error(`${path}: ${response.status}`);
+  return response;
+}
+async function start() {
+  const settings = await (await load("../settings.json")).json();
+  const exportText = await (await load("../data/export_all.csv")).text();
+  const reference = new Uint8Array(await (await load("september_2026_reference.csv")).arrayBuffer());
+  const { failures, downloads } = runPageTests(FX, exportText, settings.csv_delimiter, [["2026-09-01", "2026-09-30"]]);
+  const downloaded = new TextEncoder().encode(downloads["2026-09-01_2026-09-30"]);
+  if (downloaded.length !== reference.length || downloaded.some((byte, i) => byte !== reference[i])) {
+    failures.push("Le CSV de septembre 2026 diffère du fichier de référence");
+  }
+  document.getElementById("results").textContent = failures.length
+    ? "ÉCHEC :\n" + failures.join("\n")
+    : "Tous les tests sont réussis (dont septembre 2026 identique au fichier de référence, octet par octet).";
+}
+start().catch(error => { document.getElementById("results").textContent = "ÉCHEC : " + error; });
+</script>
+</body>
+</html>

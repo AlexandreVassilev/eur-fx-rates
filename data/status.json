@@ -1,0 +1,635 @@
+{
+ "last_updated": "2026-10-06T21:59:26Z",
+ "history_start": "2025-01-01",
+ "sources": {
+  "Banque de France": {
+   "currencies": [
+    "CHF",
+    "HKD",
+    "INR",
+    "SGD",
+    "USD"
+   ],
+   "checked_at": "2026-10-06T21:59:21Z",
+   "last_success": "2026-10-06T21:59:21Z",
+   "ok": true,
+   "error": null
+  },
+  "Central Bank of the UAE": {
+   "currencies": [
+    "AED"
+   ],
+   "checked_at": "2026-10-06T21:59:23Z",
+   "last_success": "2026-10-06T21:59:23Z",
+   "ok": true,
+   "error": null
+  },
+  "Banco Central de la República Argentina": {
+   "currencies": [
+    "ARS"
+   ],
+   "checked_at": "2026-10-06T21:59:24Z",
+   "last_success": "2026-10-06T21:59:24Z",
+   "ok": true,
+   "error": null
+  },
+  "Banco de la República (Colombia)": {
+   "currencies": [
+    "COP"
+   ],
+   "checked_at": "2026-10-06T21:59:26Z",
+   "last_success": "2026-10-06T21:59:26Z",
+   "ok": true,
+   "error": null
+  }
+ },
+ "latest": {
+  "CHF": "2026-10-06",
+  "HKD": "2026-10-06",
+  "INR": "2026-10-06",
+  "SGD": "2026-10-06",
+  "USD": "2026-10-06",
+  "AED": "2026-10-06",
+  "ARS": "2026-10-06",
+  "COP": "2026-10-06"
+ },
+ "conflicts": [],
+ "flags": [
+  {
+   "date": "2025-01-01",
+   "currency": "CHF",
+   "kind": "missing_weekday",
+   "message": "CHF : aucun taux le mercredi 01/01/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-01-01",
+   "currency": "HKD",
+   "kind": "missing_weekday",
+   "message": "HKD : aucun taux le mercredi 01/01/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-01-01",
+   "currency": "INR",
+   "kind": "missing_weekday",
+   "message": "INR : aucun taux le mercredi 01/01/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-01-01",
+   "currency": "SGD",
+   "kind": "missing_weekday",
+   "message": "SGD : aucun taux le mercredi 01/01/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-01-01",
+   "currency": "USD",
+   "kind": "missing_weekday",
+   "message": "USD : aucun taux le mercredi 01/01/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-01-01",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le mercredi 01/01/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-03-03",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le lundi 03/03/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-03-04",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le mardi 04/03/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-03-05",
+   "currency": "ARS",
+   "kind": "big_move",
+   "message": "ARS : variation de +3,72 % le 05/03/2025 (1106,807625 le 28/02/2025 → 1148,006475)"
+  },
+  {
+   "date": "2025-03-24",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le lundi 24/03/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-04-02",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le mercredi 02/04/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-04-05",
+   "currency": "COP",
+   "kind": "big_move",
+   "message": "COP : variation de +3,49 % le 05/04/2025 (4538,26148 le 04/04/2025 → 4696,51786)"
+  },
+  {
+   "date": "2025-04-14",
+   "currency": "ARS",
+   "kind": "big_move",
+   "message": "ARS : variation de +11,60 % le 14/04/2025 (1217,3854 le 11/04/2025 → 1358,6518)"
+  },
+  {
+   "date": "2025-04-16",
+   "currency": "ARS",
+   "kind": "big_move",
+   "message": "ARS : variation de -4,53 % le 16/04/2025 (1352,28 le 15/04/2025 → 1291,0625)"
+  },
+  {
+   "date": "2025-04-17",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le jeudi 17/04/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-04-18",
+   "currency": "CHF",
+   "kind": "missing_weekday",
+   "message": "CHF : aucun taux le vendredi 18/04/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-04-18",
+   "currency": "HKD",
+   "kind": "missing_weekday",
+   "message": "HKD : aucun taux le vendredi 18/04/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-04-18",
+   "currency": "INR",
+   "kind": "missing_weekday",
+   "message": "INR : aucun taux le vendredi 18/04/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-04-18",
+   "currency": "SGD",
+   "kind": "missing_weekday",
+   "message": "SGD : aucun taux le vendredi 18/04/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-04-18",
+   "currency": "USD",
+   "kind": "missing_weekday",
+   "message": "USD : aucun taux le vendredi 18/04/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-04-18",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le vendredi 18/04/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-04-21",
+   "currency": "CHF",
+   "kind": "missing_weekday",
+   "message": "CHF : aucun taux le lundi 21/04/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-04-21",
+   "currency": "HKD",
+   "kind": "missing_weekday",
+   "message": "HKD : aucun taux le lundi 21/04/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-04-21",
+   "currency": "INR",
+   "kind": "missing_weekday",
+   "message": "INR : aucun taux le lundi 21/04/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-04-21",
+   "currency": "SGD",
+   "kind": "missing_weekday",
+   "message": "SGD : aucun taux le lundi 21/04/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-04-21",
+   "currency": "USD",
+   "kind": "missing_weekday",
+   "message": "USD : aucun taux le lundi 21/04/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-04-23",
+   "currency": "ARS",
+   "kind": "big_move",
+   "message": "ARS : variation de +3,96 % le 23/04/2025 (1263,9696 le 22/04/2025 → 1314,048)"
+  },
+  {
+   "date": "2025-05-01",
+   "currency": "CHF",
+   "kind": "missing_weekday",
+   "message": "CHF : aucun taux le jeudi 01/05/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-05-01",
+   "currency": "HKD",
+   "kind": "missing_weekday",
+   "message": "HKD : aucun taux le jeudi 01/05/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-05-01",
+   "currency": "INR",
+   "kind": "missing_weekday",
+   "message": "INR : aucun taux le jeudi 01/05/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-05-01",
+   "currency": "SGD",
+   "kind": "missing_weekday",
+   "message": "SGD : aucun taux le jeudi 01/05/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-05-01",
+   "currency": "USD",
+   "kind": "missing_weekday",
+   "message": "USD : aucun taux le jeudi 01/05/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-05-01",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le jeudi 01/05/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-05-02",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le vendredi 02/05/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-05-07",
+   "currency": "ARS",
+   "kind": "big_move",
+   "message": "ARS : variation de -6,09 % le 07/05/2025 (1356,7422 le 06/05/2025 → 1274,1664)"
+  },
+  {
+   "date": "2025-06-16",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le lundi 16/06/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-06-20",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le vendredi 20/06/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-07-09",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le mercredi 09/07/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-07-31",
+   "currency": "ARS",
+   "kind": "big_move",
+   "message": "ARS : variation de +3,88 % le 31/07/2025 (1510,2775 le 30/07/2025 → 1568,8332)"
+  },
+  {
+   "date": "2025-08-01",
+   "currency": "AED",
+   "kind": "aed_usd_peg",
+   "message": "AED : 4,251563 le 01/08/2025, écart de 1,51 % avec USD 1,1404 × 3,6725 = 4,188119"
+  },
+  {
+   "date": "2025-08-15",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le vendredi 15/08/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-09-08",
+   "currency": "ARS",
+   "kind": "big_move",
+   "message": "ARS : variation de +4,14 % le 08/09/2025 (1588,602 le 05/09/2025 → 1654,3069)"
+  },
+  {
+   "date": "2025-09-22",
+   "currency": "ARS",
+   "kind": "big_move",
+   "message": "ARS : variation de -4,17 % le 22/09/2025 (1733,2725 le 19/09/2025 → 1661,0176)"
+  },
+  {
+   "date": "2025-10-10",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le vendredi 10/10/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-10-13",
+   "currency": "ARS",
+   "kind": "big_move",
+   "message": "ARS : variation de -4,88 % le 13/10/2025 (1641,52 le 09/10/2025 → 1561,3326)"
+  },
+  {
+   "date": "2025-10-17",
+   "currency": "ARS",
+   "kind": "big_move",
+   "message": "ARS : variation de +3,19 % le 17/10/2025 (1638,938 le 16/10/2025 → 1691,28)"
+  },
+  {
+   "date": "2025-10-27",
+   "currency": "ARS",
+   "kind": "big_move",
+   "message": "ARS : variation de -3,73 % le 27/10/2025 (1734,7484 le 24/10/2025 → 1670,053)"
+  },
+  {
+   "date": "2025-11-06",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le jeudi 06/11/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-11-21",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le vendredi 21/11/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-11-24",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le lundi 24/11/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-12-08",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le lundi 08/12/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-12-24",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le mercredi 24/12/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-12-25",
+   "currency": "CHF",
+   "kind": "missing_weekday",
+   "message": "CHF : aucun taux le jeudi 25/12/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-12-25",
+   "currency": "HKD",
+   "kind": "missing_weekday",
+   "message": "HKD : aucun taux le jeudi 25/12/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-12-25",
+   "currency": "INR",
+   "kind": "missing_weekday",
+   "message": "INR : aucun taux le jeudi 25/12/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-12-25",
+   "currency": "SGD",
+   "kind": "missing_weekday",
+   "message": "SGD : aucun taux le jeudi 25/12/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-12-25",
+   "currency": "USD",
+   "kind": "missing_weekday",
+   "message": "USD : aucun taux le jeudi 25/12/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-12-25",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le jeudi 25/12/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-12-26",
+   "currency": "CHF",
+   "kind": "missing_weekday",
+   "message": "CHF : aucun taux le vendredi 26/12/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-12-26",
+   "currency": "HKD",
+   "kind": "missing_weekday",
+   "message": "HKD : aucun taux le vendredi 26/12/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-12-26",
+   "currency": "INR",
+   "kind": "missing_weekday",
+   "message": "INR : aucun taux le vendredi 26/12/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-12-26",
+   "currency": "SGD",
+   "kind": "missing_weekday",
+   "message": "SGD : aucun taux le vendredi 26/12/2025 (jour férié ?)"
+  },
+  {
+   "date": "2025-12-26",
+   "currency": "USD",
+   "kind": "missing_weekday",
+   "message": "USD : aucun taux le vendredi 26/12/2025 (jour férié ?)"
+  },
+  {
+   "date": "2026-01-01",
+   "currency": "CHF",
+   "kind": "missing_weekday",
+   "message": "CHF : aucun taux le jeudi 01/01/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-01-01",
+   "currency": "HKD",
+   "kind": "missing_weekday",
+   "message": "HKD : aucun taux le jeudi 01/01/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-01-01",
+   "currency": "INR",
+   "kind": "missing_weekday",
+   "message": "INR : aucun taux le jeudi 01/01/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-01-01",
+   "currency": "SGD",
+   "kind": "missing_weekday",
+   "message": "SGD : aucun taux le jeudi 01/01/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-01-01",
+   "currency": "USD",
+   "kind": "missing_weekday",
+   "message": "USD : aucun taux le jeudi 01/01/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-01-01",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le jeudi 01/01/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-02-16",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le lundi 16/02/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-02-17",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le mardi 17/02/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-03-23",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le lundi 23/03/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-03-24",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le mardi 24/03/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-04-02",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le jeudi 02/04/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-04-03",
+   "currency": "CHF",
+   "kind": "missing_weekday",
+   "message": "CHF : aucun taux le vendredi 03/04/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-04-03",
+   "currency": "HKD",
+   "kind": "missing_weekday",
+   "message": "HKD : aucun taux le vendredi 03/04/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-04-03",
+   "currency": "INR",
+   "kind": "missing_weekday",
+   "message": "INR : aucun taux le vendredi 03/04/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-04-03",
+   "currency": "SGD",
+   "kind": "missing_weekday",
+   "message": "SGD : aucun taux le vendredi 03/04/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-04-03",
+   "currency": "USD",
+   "kind": "missing_weekday",
+   "message": "USD : aucun taux le vendredi 03/04/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-04-03",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le vendredi 03/04/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-04-06",
+   "currency": "CHF",
+   "kind": "missing_weekday",
+   "message": "CHF : aucun taux le lundi 06/04/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-04-06",
+   "currency": "HKD",
+   "kind": "missing_weekday",
+   "message": "HKD : aucun taux le lundi 06/04/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-04-06",
+   "currency": "INR",
+   "kind": "missing_weekday",
+   "message": "INR : aucun taux le lundi 06/04/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-04-06",
+   "currency": "SGD",
+   "kind": "missing_weekday",
+   "message": "SGD : aucun taux le lundi 06/04/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-04-06",
+   "currency": "USD",
+   "kind": "missing_weekday",
+   "message": "USD : aucun taux le lundi 06/04/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-05-01",
+   "currency": "CHF",
+   "kind": "missing_weekday",
+   "message": "CHF : aucun taux le vendredi 01/05/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-05-01",
+   "currency": "HKD",
+   "kind": "missing_weekday",
+   "message": "HKD : aucun taux le vendredi 01/05/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-05-01",
+   "currency": "INR",
+   "kind": "missing_weekday",
+   "message": "INR : aucun taux le vendredi 01/05/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-05-01",
+   "currency": "SGD",
+   "kind": "missing_weekday",
+   "message": "SGD : aucun taux le vendredi 01/05/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-05-01",
+   "currency": "USD",
+   "kind": "missing_weekday",
+   "message": "USD : aucun taux le vendredi 01/05/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-05-01",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le vendredi 01/05/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-05-25",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le lundi 25/05/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-06-15",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le lundi 15/06/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-07-09",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le jeudi 09/07/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-07-10",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le vendredi 10/07/2026 (jour férié ?)"
+  },
+  {
+   "date": "2026-08-17",
+   "currency": "ARS",
+   "kind": "missing_weekday",
+   "message": "ARS : aucun taux le lundi 17/08/2026 (jour férié ?)"
+  }
+ ]
+}

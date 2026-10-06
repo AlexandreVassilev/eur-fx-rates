@@ -1,0 +1,19 @@
+# Files that must never be published.
+# (Personal working notes are excluded separately, in .git/info/exclude.)
+
+# Python's caches
+__pycache__/
+*.pyc
+
+# macOS folder settings
+.DS_Store
+
+# Excel workbooks and CSV exports made by hand or with export_csv.py
+*.xlsx
+*.xls
+*.xlsm
+fx_rates_*.csv
+taux_de_change_*.csv
+
+# Half-written file if an update is interrupted
+data/*.tmp

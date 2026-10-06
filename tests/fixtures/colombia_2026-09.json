@@ -1,0 +1,297 @@
+[
+  {
+    "id": 30,
+    "nombre": "Euro - COP/EUR - Tasa media",
+    "categoria": "Tasas de cambio nominales",
+    "valor": 0.0,
+    "unidad": "COP/EUR",
+    "idTipoDato": 0,
+    "descripcionTipoDato": "Dato diario",
+    "idPeriodicidad": 1,
+    "descripcionPeriodicidad": "Dato diario",
+    "serieTipoDatos": "1|3|9|12|15|18",
+    "serieTipoCalculos": "",
+    "fechaInicial": {
+      "year": 2008,
+      "month": 10,
+      "dayOfMonth": 20,
+      "hourOfDay": 0,
+      "minute": 0,
+      "second": 0
+    },
+    "fechaFinal": {
+      "year": 2026,
+      "month": 9,
+      "dayOfMonth": 6,
+      "hourOfDay": 0,
+      "minute": 0,
+      "second": 0
+    },
+    "fechaInicialFormateada": "20 de noviembre  de  2008",
+    "fechaFinalFormateada": "06 de octubre  de  2026",
+    "fechaProximoCargue": {
+      "year": 2026,
+      "month": 9,
+      "dayOfMonth": 7,
+      "hourOfDay": 0,
+      "minute": 0,
+      "second": 0
+    },
+    "fechaProximoCargueFormateada": "07 de octubre de 2026",
+    "fechaUltimoCargue": {
+      "year": 2026,
+      "month": 9,
+      "dayOfMonth": 6,
+      "hourOfDay": 0,
+      "minute": 0,
+      "second": 0
+    },
+    "fechaUltimoCargueFormateada": "06 de octubre de 2026",
+    "idCategoria": 7,
+    "tiposCalculos": [],
+    "tiposPeriodicidades": [
+      {
+        "idTipoDato": 1,
+        "descripcion": "Dato diario",
+        "descripcionIngles": "Daily data"
+      },
+      {
+        "idTipoDato": 3,
+        "descripcion": "Dato fin de semana",
+        "descripcionIngles": "Weekend data"
+      },
+      {
+        "idTipoDato": 9,
+        "descripcion": "Dato fin de mes",
+        "descripcionIngles": "End of month data"
+      },
+      {
+        "idTipoDato": 12,
+        "descripcion": "Dato fin de trimestre",
+        "descripcionIngles": "End of quarter data"
+      },
+      {
+        "idTipoDato": 15,
+        "descripcion": "Dato fin de semestre",
+        "descripcionIngles": "End of half year data"
+      },
+      {
+        "idTipoDato": 18,
+        "descripcion": "Dato fin de año",
+        "descripcionIngles": "End of year data"
+      }
+    ],
+    "rank": 0,
+    "fuente": "Fuente: Refinitiv",
+    "palabrasClavesEspanol": "tasa, tasas, tasa cambio, tasa de cambio, tasas de cambio, monedas de reserva, reserva, moneda, monedas, monedas reserva, euro, eur, cop/eur",
+    "idCargue": "TASAS_VM",
+    "numeroConsultas": 0,
+    "seriesRelacionadas": "0",
+    "categoriasRelacionadas": "0",
+    "notas": "Las siguientes tasas de cambio se publican en cumplimiento de lo dispuesto en el articulo 1 de la Resolución Externa 1 de 2018 de la Junta Directiva del Banco de la República. Según el mencionado articulo el Banco de la República podrá efectuar sus operaciones en Derechos Especiales de Giro (DEG) y en las monedas que a continuación se indican: corona danesa (DKK), corona noruega (NOK), corona sueca (SEK), dólar de Australia (AUD), dólar de Canadá (CAD), dólar de los Estados Unidos de América (USD), dólar de Nueva Zelanda (NZD), euro (EUR), franco suizo (CHF), libra esterlina británica (GBP), yen japonés (JPY), reminbi chino (CNH/CNY), dólar de Hong Kong (HKD), dólar de Singapur (SGD) y won coreano (KRW). El Banco de la República publicará diariamente las tasas de conversión de las mismas con respecto al dólar de los Estados Unidos de América.",
+    "codigoSubCategoria": 803,
+    "descripcionSubCategoria": "Monedas de reserva",
+    "ordenBusqueda": 1.0,
+    "fichaTecnica": "-",
+    "baseSerie": "",
+    "categoriaNivel1": "Sector externo, tasas de cambio y derivados",
+    "categoriaNivel2": "Tasas de cambio nominales",
+    "categoriaNivel3": "Tasas de cambio nominales",
+    "descripcionCorta": "Euro - COP/EUR - Tasa media",
+    "desestacionalizacion": "",
+    "etiquetaAtributo": "Categoría|Categoria2|Categoria3|Periodicidad|Periodo base|Ajuste estacional|Geografia|Precios|Periodo de referencia",
+    "fuenteCorta": "Refinitiv",
+    "geografiaSerie": "",
+    "padreSerie": "178",
+    "periodoReferencia": "",
+    "precioSerie": "*",
+    "valorAtributo": "Tasas de cambio y sector externo|Tasas de cambio|Tasas de cambio bilaterales|Diaria|||||",
+    "padreSerieDescripcion": "Euro - COP/EUR - Tasa media",
+    "ordenado": false,
+    "seleccionaHijo": false,
+    "unidadCorta": "COP/EUR",
+    "datoProducidoBanrep": "NO",
+    "numeroDecimales": 5,
+    "feErratas": "-",
+    "definicion": "Las siguientes tasas de cambio se publican en cumplimiento de lo dispuesto en el articulo 1 de la Resolución Externa 1 de 2018 de la Junta Directiva del Banco de la República. Según el mencionado articulo el Banco de la República podrá efectuar sus operaciones en Derechos Especiales de Giro (DEG) y en las monedas que a continuación se indican: corona danesa (DKK), corona noruega (NOK), corona sueca (SEK), dólar de Australia (AUD), dólar de Canadá (CAD), dólar de los Estados Unidos de América (USD), dólar de Nueva Zelanda (NZD), euro (EUR), franco suizo (CHF), libra esterlina británica (GBP), yen japonés (JPY), reminbi chino (CNH/CNY), dólar de Hong Kong (HKD), dólar de Singapur (SGD) y won coreano (KRW). El Banco de la República publicará diariamente las tasas de conversión de las mismas con respecto al dólar de los Estados Unidos de América.",
+    "data": [
+      [
+        1788238800000,
+        3726.91961
+      ],
+      [
+        1788325200000,
+        3691.37040
+      ],
+      [
+        1788411600000,
+        3649.16207
+      ],
+      [
+        1788498000000,
+        3649.00377
+      ],
+      [
+        1788584400000,
+        3631.25452
+      ],
+      [
+        1788670800000,
+        3631.25452
+      ],
+      [
+        1788757200000,
+        3636.09995
+      ],
+      [
+        1788843600000,
+        3635.78734
+      ],
+      [
+        1788930000000,
+        3629.75260
+      ],
+      [
+        1789016400000,
+        3604.07534
+      ],
+      [
+        1789102800000,
+        3601.65645
+      ],
+      [
+        1789189200000,
+        3568.28799
+      ],
+      [
+        1789275600000,
+        3568.28799
+      ],
+      [
+        1789362000000,
+        3544.63151
+      ],
+      [
+        1789448400000,
+        3589.22045
+      ],
+      [
+        1789534800000,
+        3577.29921
+      ],
+      [
+        1789621200000,
+        3593.34915
+      ],
+      [
+        1789707600000,
+        3612.51292
+      ],
+      [
+        1789794000000,
+        3659.72490
+      ],
+      [
+        1789880400000,
+        3659.72490
+      ],
+      [
+        1789966800000,
+        3663.23711
+      ],
+      [
+        1790053200000,
+        3653.05245
+      ],
+      [
+        1790139600000,
+        3658.35369
+      ],
+      [
+        1790226000000,
+        3712.91718
+      ],
+      [
+        1790312400000,
+        3796.25484
+      ],
+      [
+        1790398800000,
+        3770.31642
+      ],
+      [
+        1790485200000,
+        3770.31642
+      ],
+      [
+        1790571600000,
+        3757.91570
+      ],
+      [
+        1790658000000,
+        3798.48042
+      ],
+      [
+        1790744400000,
+        3795.13609
+      ]
+    ],
+    "metadataNotas": {
+      "idSerie": 930033,
+      "nivel": "1",
+      "idNivel": "3.1",
+      "nombre": "Tasas de cambio",
+      "notas": [],
+      "seriesHijas": [
+        {
+          "idSerie": 930071,
+          "nivel": "2",
+          "idNivel": "3.1.6",
+          "nombre": "Monedas de reserva",
+          "notas": [
+            {
+              "descripcion": "Se informa que el día 26 de diciembre de 2023, el Banco de la República en su publicación de tasas de cambio provenientes de Refinitiv, por error publicó los mismos datos del viernes 22 de diciembre de 2023 para el 26 de diciembre de 2023. El error se produjo por asumir que debido a que el 26 de diciembre era día festivo en el Reino Unido, el proveedor Refinitiv no iba a producir tasas de cambio. Dado lo anterior, los datos de tasas de cambio para el 26 de diciembre de 2023 fueron reemplazados por los producidos por Refinitiv para el 26 de diciembre de 2023. La corrección del dato se realizó en la página del Banco sobre las 12:30 p.m. (hora colombiana - COT) el día 27 de diciembre de 2023.",
+              "fechaNotaDesde": "2023-01-01",
+              "fechaNotaHasta": "",
+              "tipo": "FE_ERRATA",
+              "estado": "ACTIVO"
+            },
+            {
+              "descripcion": "Nota de exclusión de responsabilidad: Refinitiv no se hace responsable por los errores o demoras para proveer la información o cualquier actuación relacionada con ésta, salvo que éstas sean causadas directamente por negligencia de sus empleados.",
+              "fechaNotaDesde": "2023-01-01",
+              "fechaNotaHasta": "",
+              "tipo": "NOTA_ACLARATORIA",
+              "estado": "ACTIVO"
+            },
+            {
+              "descripcion": "Se informa que el día 29 de mayo de 2023, el Banco de la República en su publicación de tasas de cambio provenientes de Refinitiv, por error publicó los mismos datos del viernes 26 de mayo de 2023 para el 29 de mayo de 2023. El error se produjo por asumir que debido a que el 29 de mayo era día festivo en el Reino Unido el proveedor Refinitiv no iba a producir tasas de cambio. Dado lo anterior, los datos de tasas de cambio para el 29 de mayo de 2023 fueron reemplazados por los producidos por Refinitiv para el 29 de mayo de 2023. La corrección del dato se realizó en la página del Banco sobre las 7:45 p.m. (hora colombiana - COT) el día 29 de mayo de 2023.",
+              "fechaNotaDesde": "2023-01-01",
+              "fechaNotaHasta": "",
+              "tipo": "FE_ERRATA",
+              "estado": "ACTIVO"
+            }
+          ],
+          "seriesHijas": [
+            {
+              "idSerie": 930078,
+              "nivel": "3",
+              "idNivel": "3.1.6.9",
+              "nombre": "Tasa de cambio Europa",
+              "notas": [],
+              "seriesHijas": [
+                {
+                  "idSerie": 30,
+                  "nivel": "4",
+                  "idNivel": "3.1.6.9.2",
+                  "nombre": "Euro - COP/EUR - Tasa media",
+                  "notas": [],
+                  "seriesHijas": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
