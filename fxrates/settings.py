@@ -1,7 +1,7 @@
 """Reads settings.json, the one place for settings shared by the Python code and the web page.
 
 csv_delimiter                  character between columns in the exported CSV
-csv_decimal_mark               decimal mark in the exported CSV ("," = French style)
+csv_decimal_mark               decimal mark in the exported CSV ("." = decimal point)
 history_start                  first date kept in data/rates.csv
 refetch_days                   each update re-checks this many recent days, to pick up late publications
 move_threshold_percent         flag a day-to-day move larger than this

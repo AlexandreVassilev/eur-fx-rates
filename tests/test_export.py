@@ -9,7 +9,6 @@ import unittest
 from pathlib import Path
 
 from fxrates import argentina, banque_de_france, checks, colombia, export, history, settings as settings_file, uae
-from fxrates.history import CURRENCIES
 
 TESTS = Path(__file__).parent
 FIXTURES = TESTS / "fixtures"
@@ -29,11 +28,11 @@ def september_from_fixtures():
     history.merge(rates, colombia.parse(fixture("colombia_2026-09.json"), SEPT_1, SEPT_30))
     # The UAE fixture only has 1 September; the other AED values come from the reference file.
     history.merge(rates, {SEPT_1: {"AED": uae.parse(fixture("uae_2026-09-01.html"), SEPT_1)}})
-    for line in (TESTS / "september_2026_reference.csv").read_text(encoding="utf-8-sig").splitlines()[1:]:
+    for line in (TESTS / "september_2026_reference.csv").read_text(encoding="utf-8").splitlines()[1:]:
         cells = line.split(";")
-        if cells[6]:
+        if cells[1]:
             day = dt.datetime.strptime(cells[0], "%d/%m/%Y").date()
-            history.merge(rates, {day: {"AED": cells[6].replace(",", ".")}})
+            history.merge(rates, {day: {"AED": cells[1]}})
     return rates
 
 
@@ -45,11 +44,22 @@ class ExportTests(unittest.TestCase):
     def test_format_details(self):
         rates = {dt.date(2026, 9, 4): {"USD": "1.1622", "COP": "3649.00377"}}
         csv_text = export.to_csv(rates, dt.date(2026, 9, 4), dt.date(2026, 9, 5), SETTINGS)
-        self.assertTrue(csv_text.startswith("\ufeffDate;CHF;HKD;INR;SGD;USD;AED;ARS;COP\r\n"))
-        lines = csv_text[1:].split("\r\n")
-        self.assertEqual(lines[1], "05/09/2026;;;;;;;;")  # newest first; empty, never 0 or N/A
-        self.assertEqual(lines[2], "04/09/2026;;;;;1,1622;;;3649,00377")
+        self.assertTrue(csv_text.startswith("Date;AED;ARS;CHF;COP;HKD;INR;SGD;USD\r\n"))  # no BOM
+        lines = csv_text.split("\r\n")
+        self.assertEqual(lines[1], "04/09/2026;;;;3649.00377;;;;1.1622")  # oldest first, decimal point
+        self.assertEqual(lines[2], "05/09/2026;;;;;;;;")  # empty, never 0 or N/A
         self.assertEqual(lines[3], "")  # file ends with a line break
+
+    def test_cop_empty_when_no_banque_de_france_rate(self):
+        # Sat 5 Sept: COP only. Mon 7 Sept: an ECB holiday, AED and COP only. Tue 8 Sept: one ECB rate.
+        rates = {dt.date(2026, 9, 5): {"COP": "3631.25452"},
+                 dt.date(2026, 9, 7): {"AED": "4.26", "COP": "3640"},
+                 dt.date(2026, 9, 8): {"INR": "110", "COP": "3650"}}
+        lines = export.to_csv(rates, dt.date(2026, 9, 5), dt.date(2026, 9, 8), SETTINGS).split("\r\n")
+        self.assertEqual(lines[1], "05/09/2026;;;;;;;;")
+        self.assertEqual(lines[3], "07/09/2026;4.26;;;;;;;")
+        self.assertEqual(lines[4], "08/09/2026;;;;3650;;110;;")
+        self.assertEqual(rates[dt.date(2026, 9, 5)], {"COP": "3631.25452"})  # the history keeps COP
 
     def test_one_row_per_calendar_day(self):
         csv_text = export.to_csv({}, dt.date(2024, 2, 1), dt.date(2024, 3, 1), SETTINGS)
@@ -62,13 +72,18 @@ class ExportTests(unittest.TestCase):
     def test_delimiter_comes_from_settings(self):
         settings = {**SETTINGS, "csv_delimiter": ",", "csv_decimal_mark": "."}
         csv_text = export.to_csv({SEPT_1: {"CHF": "0.9394"}}, SEPT_1, SEPT_1, settings)
-        self.assertIn("Date,CHF,HKD", csv_text)
-        self.assertIn("01/09/2026,0.9394,,", csv_text)
+        self.assertIn("Date,AED,ARS,CHF", csv_text)
+        self.assertIn("01/09/2026,,,0.9394,,", csv_text)
+
+    def test_decimal_mark_comes_from_settings(self):
+        settings = {**SETTINGS, "csv_decimal_mark": ","}
+        csv_text = export.to_csv({SEPT_1: {"CHF": "0.9394"}}, SEPT_1, SEPT_1, settings)
+        self.assertIn("01/09/2026;;;0,9394;", csv_text)
 
     def test_same_delimiter_and_decimal_mark_is_refused(self):
         with tempfile.TemporaryDirectory() as folder:
             path = Path(folder) / "settings.json"
-            path.write_text(SETTINGS_FILE_TEXT.replace('"csv_decimal_mark": ","', '"csv_decimal_mark": ";"'))
+            path.write_text(SETTINGS_FILE_TEXT.replace('"csv_decimal_mark": "."', '"csv_decimal_mark": ";"'))
             with self.assertRaises(ValueError):
                 settings_file.load(path)
 
@@ -76,7 +91,7 @@ class ExportTests(unittest.TestCase):
         rates = september_from_fixtures()
         self.assertEqual(export.currencies_without_data(rates, SEPT_1, SEPT_30), [])
         self.assertEqual(export.currencies_without_data(rates, dt.date(2026, 9, 5), dt.date(2026, 9, 6)),
-                         [c for c in CURRENCIES if c != "COP"])
+                         [c for c in export.COLUMNS if c != "COP"])
 
 
 SETTINGS_FILE_TEXT = settings_file.SETTINGS_FILE.read_text(encoding="utf-8")

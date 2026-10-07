@@ -20,14 +20,14 @@ function runPageTests(FX, exportText, delimiter, ranges) {
   check("toFr", FX.toFr("2026-09-30"), "30/09/2026");
   check("daysBetween", FX.daysBetween("2026-09-28", "2026-10-02"), 4);
 
-  const sample = FX.parseExport("\ufeffDate;CHF;COP\r\n02/09/2026;0,9424;3691,3704\r\n01/09/2026;;3726,91961\r\n", ";");
+  const sample = FX.parseExport("Date;CHF;COP\r\n01/09/2026;0.9394;3726.91961\r\n02/09/2026;;3691.3704\r\n", ";");
   check("header", sample.header, "Date;CHF;COP");
-  check("rows newest first", sample.rows.map(r => r.iso), ["2026-09-02", "2026-09-01"]);
-  check("empty cell stays empty", sample.rows[1].cells, ["01/09/2026", "", "3726,91961"]);
+  check("rows oldest first", sample.rows.map(r => r.iso), ["2026-09-01", "2026-09-02"]);
+  check("empty cell stays empty", sample.rows[1].cells, ["02/09/2026", "", "3691.3704"]);
   check("range of one day", FX.selectRows(sample.rows, "2026-09-01", "2026-09-01").map(r => r.iso), ["2026-09-01"]);
   check("range outside the data", FX.selectRows(sample.rows, "2026-10-01", "2026-10-31"), []);
   check("csv format", FX.buildCsv(sample.header, sample.rows.slice(1)),
-        "\ufeffDate;CHF;COP\r\n01/09/2026;;3726,91961\r\n");
+        "Date;CHF;COP\r\n02/09/2026;;3691.3704\r\n");
   check("last complete month", FX.lastCompleteMonth("2026-10-07"), ["2026-09-01", "2026-09-30"]);
   check("last complete month in January", FX.lastCompleteMonth("2027-01-15"), ["2026-12-01", "2026-12-31"]);
   check("last complete month, leap February", FX.lastCompleteMonth("2028-03-01"), ["2028-02-01", "2028-02-29"]);

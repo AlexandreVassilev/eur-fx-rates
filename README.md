@@ -6,6 +6,25 @@ download for any date range.
 
 *(The sections for the page's users and for maintenance will be added in Phase 5.)*
 
+## CSV format
+
+The downloaded file and the table on the page are identical. Both come from
+one formatter, `fxrates/export.py` (the page cuts its range out of
+`data/export_all.csv`). The format is the one of the file sent to the board:
+
+- header and columns: `Date;AED;ARS;CHF;COP;HKD;INR;SGD;USD`
+- one row per calendar day, oldest date first, dates as dd/mm/yyyy
+- semicolon between columns, decimal point (`1752.7904`), no thousands
+  separator, trailing zeros removed without rounding
+- empty cell when there is no rate (never 0 or N/A)
+- no BOM, Windows line endings (CRLF), a line break after the last row
+- COP is left empty on days when CHF, HKD, INR, SGD and USD are all empty
+  (weekends and ECB holidays). This only applies to the export:
+  `data/rates.csv` keeps every daily COP value.
+
+The delimiter and decimal mark are set in `settings.json` (`csv_delimiter`,
+`csv_decimal_mark`); the program refuses settings where both are the same.
+
 ## Sources: what the page links to, and what we really fetch
 
 The panel "Source utilisée" on the page links to each bank's **public page**,

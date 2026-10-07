@@ -44,9 +44,9 @@ const FX = {
     return Math.round((Date.parse(b) - Date.parse(a)) / 86400000);
   },
 
-  // Split the exported CSV into its header and rows (newest first).
+  // Split the exported CSV into its header and rows (oldest first).
   parseExport(text, delimiter) {
-    const lines = text.replace(/^\ufeff/, "").split("\r\n");
+    const lines = text.split("\r\n");
     if (lines[lines.length - 1] === "") lines.pop();
     const header = lines.shift();
     const rows = lines.map(line => {
@@ -61,9 +61,9 @@ const FX = {
     return rows.filter(row => row.iso >= startIso && row.iso <= endIso);
   },
 
-  // The CSV file: byte order mark, header, chosen rows, Windows line endings.
+  // The CSV file: header, chosen rows, Windows line endings, no byte order mark.
   buildCsv(header, rows) {
-    return "\ufeff" + [header, ...rows.map(row => row.line)].join("\r\n") + "\r\n";
+    return [header, ...rows.map(row => row.line)].join("\r\n") + "\r\n";
   },
 
   // Serious alerts for the chosen range: large moves, AED gap, zero or
@@ -165,8 +165,8 @@ async function startPage() {
   const message = document.getElementById("message");
   const frame = document.getElementById("cadre-tableau");
   const alertsBox = document.getElementById("alertes");
-  const firstIso = data.rows[data.rows.length - 1].iso;
-  const lastIso = data.rows[0].iso;
+  const firstIso = data.rows[0].iso;
+  const lastIso = data.rows[data.rows.length - 1].iso;
   let chosenRows = [];
 
   for (const input of [start, end]) {
