@@ -1,5 +1,5 @@
 {
- "last_updated": "2026-10-11T04:59:41Z",
+ "last_updated": "2026-10-11T19:27:41Z",
  "history_start": "2025-01-01",
  "sources": {
   "Banque de France": {
@@ -10,8 +10,8 @@
     "SGD",
     "USD"
    ],
-   "checked_at": "2026-10-11T04:59:32Z",
-   "last_success": "2026-10-11T04:59:32Z",
+   "checked_at": "2026-10-11T19:27:33Z",
+   "last_success": "2026-10-11T19:27:33Z",
    "ok": true,
    "error": null
   },
@@ -19,8 +19,8 @@
    "currencies": [
     "AED"
    ],
-   "checked_at": "2026-10-11T04:59:34Z",
-   "last_success": "2026-10-11T04:59:34Z",
+   "checked_at": "2026-10-11T19:27:35Z",
+   "last_success": "2026-10-11T19:27:35Z",
    "ok": true,
    "error": null
   },
@@ -28,8 +28,8 @@
    "currencies": [
     "ARS"
    ],
-   "checked_at": "2026-10-11T04:59:40Z",
-   "last_success": "2026-10-11T04:59:40Z",
+   "checked_at": "2026-10-11T19:27:40Z",
+   "last_success": "2026-10-11T19:27:40Z",
    "ok": true,
    "error": null
   },
@@ -37,8 +37,8 @@
    "currencies": [
     "COP"
    ],
-   "checked_at": "2026-10-11T04:59:41Z",
-   "last_success": "2026-10-11T04:59:41Z",
+   "checked_at": "2026-10-11T19:27:41Z",
+   "last_success": "2026-10-11T19:27:41Z",
    "ok": true,
    "error": null
   }
@@ -51,7 +51,7 @@
   "USD": "2026-10-09",
   "AED": "2026-10-09",
   "ARS": "2026-10-09",
-  "COP": "2026-10-10"
+  "COP": "2026-10-11"
  },
  "conflicts": [],
  "flags": [
