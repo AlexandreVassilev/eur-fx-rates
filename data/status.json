@@ -1,5 +1,5 @@
 {
- "last_updated": "2026-10-10T19:27:11Z",
+ "last_updated": "2026-10-11T04:59:41Z",
  "history_start": "2025-01-01",
  "sources": {
   "Banque de France": {
@@ -10,8 +10,8 @@
     "SGD",
     "USD"
    ],
-   "checked_at": "2026-10-10T19:27:04Z",
-   "last_success": "2026-10-10T19:27:04Z",
+   "checked_at": "2026-10-11T04:59:32Z",
+   "last_success": "2026-10-11T04:59:32Z",
    "ok": true,
    "error": null
   },
@@ -19,8 +19,8 @@
    "currencies": [
     "AED"
    ],
-   "checked_at": "2026-10-10T19:27:06Z",
-   "last_success": "2026-10-10T19:27:06Z",
+   "checked_at": "2026-10-11T04:59:34Z",
+   "last_success": "2026-10-11T04:59:34Z",
    "ok": true,
    "error": null
   },
@@ -28,8 +28,8 @@
    "currencies": [
     "ARS"
    ],
-   "checked_at": "2026-10-10T19:27:10Z",
-   "last_success": "2026-10-10T19:27:10Z",
+   "checked_at": "2026-10-11T04:59:40Z",
+   "last_success": "2026-10-11T04:59:40Z",
    "ok": true,
    "error": null
   },
@@ -37,8 +37,8 @@
    "currencies": [
     "COP"
    ],
-   "checked_at": "2026-10-10T19:27:11Z",
-   "last_success": "2026-10-10T19:27:11Z",
+   "checked_at": "2026-10-11T04:59:41Z",
+   "last_success": "2026-10-11T04:59:41Z",
    "ok": true,
    "error": null
   }
