@@ -1,5 +1,5 @@
 {
- "last_updated": "2026-10-27T06:18:25Z",
+ "last_updated": "2026-10-27T20:44:00Z",
  "history_start": "2025-01-01",
  "sources": {
   "Banque de France": {
@@ -10,8 +10,8 @@
     "SGD",
     "USD"
    ],
-   "checked_at": "2026-10-27T06:18:16Z",
-   "last_success": "2026-10-27T06:18:16Z",
+   "checked_at": "2026-10-27T20:43:53Z",
+   "last_success": "2026-10-27T20:43:53Z",
    "ok": true,
    "error": null
   },
@@ -19,8 +19,8 @@
    "currencies": [
     "AED"
    ],
-   "checked_at": "2026-10-27T06:18:19Z",
-   "last_success": "2026-10-27T06:18:19Z",
+   "checked_at": "2026-10-27T20:43:55Z",
+   "last_success": "2026-10-27T20:43:55Z",
    "ok": true,
    "error": null
   },
@@ -28,8 +28,8 @@
    "currencies": [
     "ARS"
    ],
-   "checked_at": "2026-10-27T06:18:24Z",
-   "last_success": "2026-10-27T06:18:24Z",
+   "checked_at": "2026-10-27T20:43:58Z",
+   "last_success": "2026-10-27T20:43:58Z",
    "ok": true,
    "error": null
   },
@@ -37,21 +37,21 @@
    "currencies": [
     "COP"
    ],
-   "checked_at": "2026-10-27T06:18:25Z",
-   "last_success": "2026-10-27T06:18:25Z",
+   "checked_at": "2026-10-27T20:44:00Z",
+   "last_success": "2026-10-27T20:44:00Z",
    "ok": true,
    "error": null
   }
  },
  "latest": {
-  "CHF": "2026-10-26",
-  "HKD": "2026-10-26",
-  "INR": "2026-10-26",
-  "SGD": "2026-10-26",
-  "USD": "2026-10-26",
-  "AED": "2026-10-26",
-  "ARS": "2026-10-26",
-  "COP": "2026-10-26"
+  "CHF": "2026-10-27",
+  "HKD": "2026-10-27",
+  "INR": "2026-10-27",
+  "SGD": "2026-10-27",
+  "USD": "2026-10-27",
+  "AED": "2026-10-27",
+  "ARS": "2026-10-27",
+  "COP": "2026-10-27"
  },
  "conflicts": [],
  "flags": [
