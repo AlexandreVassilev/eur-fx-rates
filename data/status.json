@@ -1,5 +1,5 @@
 {
- "last_updated": "2026-11-19T14:42:40Z",
+ "last_updated": "2026-11-20T01:46:34Z",
  "history_start": "2025-01-01",
  "sources": {
   "Banque de France": {
@@ -10,8 +10,8 @@
     "SGD",
     "USD"
    ],
-   "checked_at": "2026-11-19T14:42:33Z",
-   "last_success": "2026-11-19T14:42:33Z",
+   "checked_at": "2026-11-20T01:46:12Z",
+   "last_success": "2026-11-20T01:46:12Z",
    "ok": true,
    "error": null
   },
@@ -19,8 +19,8 @@
    "currencies": [
     "AED"
    ],
-   "checked_at": "2026-11-19T14:42:34Z",
-   "last_success": "2026-11-19T14:42:34Z",
+   "checked_at": "2026-11-20T01:46:14Z",
+   "last_success": "2026-11-20T01:46:14Z",
    "ok": true,
    "error": null
   },
@@ -28,30 +28,30 @@
    "currencies": [
     "ARS"
    ],
-   "checked_at": "2026-11-19T14:42:39Z",
+   "checked_at": "2026-11-20T01:46:18Z",
    "last_success": "2026-11-19T14:42:39Z",
-   "ok": true,
-   "error": null
+   "ok": false,
+   "error": "Could not download https://api.bcra.gob.ar/estadisticascambiarias/v1.0/Cotizaciones/EUR?fechadesde=2026-11-11&fechahasta=2026-11-20&limit=1000&offset=0 after 3 attempts: HTTP Error 400: Bad Request"
   },
   "Banco de la República (Colombia)": {
    "currencies": [
     "COP"
    ],
-   "checked_at": "2026-11-19T14:42:40Z",
-   "last_success": "2026-11-19T14:42:40Z",
+   "checked_at": "2026-11-20T01:46:34Z",
+   "last_success": "2026-11-20T01:46:34Z",
    "ok": true,
    "error": null
   }
  },
  "latest": {
-  "CHF": "2026-11-18",
-  "HKD": "2026-11-18",
-  "INR": "2026-11-18",
-  "SGD": "2026-11-18",
-  "USD": "2026-11-18",
+  "CHF": "2026-11-19",
+  "HKD": "2026-11-19",
+  "INR": "2026-11-19",
+  "SGD": "2026-11-19",
+  "USD": "2026-11-19",
   "AED": "2026-11-19",
   "ARS": "2026-11-18",
-  "COP": "2026-11-18"
+  "COP": "2026-11-19"
  },
  "conflicts": [],
  "flags": [
